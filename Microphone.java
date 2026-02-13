@@ -1,15 +1,15 @@
-class Laptop{
+class Microphone{
     static boolean isConnected;
-    static int currentVolumeVolume;
-    static int maxVolume=100;
+    static int currentVolume
+    static int maxVolume=10;
 
     static boolean onOrOff(){
         if (isConnected==false){
             isConnected=true;
-            System.out.println("Laptop is ON...");
-        } else {
+            System.out.println("Microphone is ON...");
+        }else{
             isConnected=false;
-            System.out.println("Laptop is OFF...");
+            System.out.println("Microphone is OFF...");
         }
         return isConnected;
     }
@@ -17,25 +17,24 @@ class Laptop{
         if (isConnected==true){
             if (currentVolume<maxVolume){
                 currentVolume=currentVolume+1;
-                System.out.println("current Volume:"+currentVolume);
+                System.out.println("Current Volume:"+currentVolume);
             }else{
-                System.out.println("Max system volume reached");
+                System.out.println("Max Volume reached");
             }
         }else{
-            System.out.println("Laptop is OFF.");
+            System.out.println("Microphone is OFF.");
         }
     }
-
-    public static void decreaseVolume(){
+    public static void decreaseVolume() {
         if (isConnected==true){
             if (currentVolume>0){
                 currentVolume=currentVolume-1;
                 System.out.println("Current Volume:"+currentVolume);
             } else {
-                System.out.println("Min system volume reached");
+                System.out.println("Min volume reached");
             }
         } else {
-            System.out.println("Laptop is OFF.");
+            System.out.println("Microphone is OFF.");
         }
     }
 }
